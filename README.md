@@ -2,7 +2,7 @@
 
 This is an html5/canvas implementation of classic game pong.
 
-![GoPong](https://github.com/dimiro1/gopong/gopong.png "GoPong")
+![GoPong](https://raw.githubusercontent.com/dimiro1/gopong/master/gopong.png "GoPong")
 
 # Compiling
 
