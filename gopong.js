@@ -13152,13 +13152,21 @@ $packages["github.com/dimiro1/gopong"] = (function() {
 	};
 	Keys.prototype.OnKeyUp = function(key) { return this.$val.OnKeyUp(key); };
 	main = function() {
+<<<<<<< Updated upstream
 		var body, canvas, document, keys, loop, pong, screen;
+=======
+		var canvas, document, keys, loop, pong, screen;
+>>>>>>> Stashed changes
 		document = $global.document;
 		canvas = document.createElement($externalize("canvas", $String));
 		canvas.width = 300;
 		canvas.height = 200;
+<<<<<<< Updated upstream
 		body = document.body;
 		body.appendChild(canvas);
+=======
+		document.body.appendChild(canvas);
+>>>>>>> Stashed changes
 		pong = new Pong.ptr(ptrType.nil, ptrType.nil, ptrType$1.nil);
 		keys = $clone(NewKeys(), Keys);
 		screen = new CanvasScreen.ptr(canvas);
@@ -13170,11 +13178,19 @@ $packages["github.com/dimiro1/gopong"] = (function() {
 			$global.requestAnimationFrame($externalize(loop, funcType));
 		});
 		loop();
+<<<<<<< Updated upstream
 		body.addEventListener($externalize("keydown", $String), $externalize((function(e) {
 			var e;
 			keys.OnKeyDown($parseInt(e.keyCode) >> 0);
 		}), funcType$1));
 		body.addEventListener($externalize("keyup", $String), $externalize((function(e) {
+=======
+		document.body.addEventListener($externalize("keydown", $String), $externalize((function(e) {
+			var e;
+			keys.OnKeyDown($parseInt(e.keyCode) >> 0);
+		}), funcType$1));
+		document.body.addEventListener($externalize("keyup", $String), $externalize((function(e) {
+>>>>>>> Stashed changes
 			var e;
 			keys.OnKeyUp($parseInt(e.keyCode) >> 0);
 		}), funcType$1));
