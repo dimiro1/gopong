@@ -4,6 +4,10 @@ This is an html5/canvas implementation of classic game pong.
 
 ![GoPong](https://raw.githubusercontent.com/dimiro1/gopong/master/gopong.png "GoPong")
 
+# Online version
+
+http://dimiro1.github.io/gopong/
+
 # Compiling
 
 Just install gopherjs and build with it.
