@@ -15,8 +15,10 @@ func main() {
 	canvas.Set("width", 300)
 	canvas.Set("height", 200)
 
+	body := document.Get("body")
+
 	// append the canvas element to the html page body
-	document.Get("body").Call("appendChild", canvas)
+	body.Call("appendChild", canvas)
 
 	// Create the game
 	pong := Pong{}
@@ -42,11 +44,11 @@ func main() {
 	loop()
 
 	// Attach keyboard events
-	document.Get("body").Call("addEventListener", "keydown", func(e js.Object) {
+	body.Call("addEventListener", "keydown", func(e js.Object) {
 		keys.OnKeyDown(e.Get("keyCode").Int())
 	})
 
-	document.Get("body").Call("addEventListener", "keyup", func(e js.Object) {
+	body.Call("addEventListener", "keyup", func(e js.Object) {
 		keys.OnKeyUp(e.Get("keyCode").Int())
 	})
 
