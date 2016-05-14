@@ -26,7 +26,7 @@ func main() {
 	keys := NewKeys()
 
 	// A canvas Screen
-	screen := CanvasScreen{Canvas: canvas}
+	screen := &CanvasScreen{Canvas: canvas}
 
 	// Initialize Objects
 	pong.Load(screen)

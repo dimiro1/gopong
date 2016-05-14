@@ -146,13 +146,13 @@ func (p *Pong) Update(s Screen, keys Keys) {
 	}
 
 	// Keyboard
-	if keys.IsDown(KEY_UP) {
+	if keys.IsDown(keyUp) {
 		if p.player.y >= 0 {
 			p.player.Up()
 		}
 	}
 
-	if keys.IsDown(KEY_DOWN) {
+	if keys.IsDown(keyDown) {
 		if p.player.y <= s.Height()-p.player.h {
 			p.player.Down()
 		}

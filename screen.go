@@ -32,11 +32,11 @@ type Screen interface {
 
 // A HTML5 Canvas Screen implementation
 type CanvasScreen struct {
-	Canvas js.Object // Javascript canvas Object
+	Canvas *js.Object // Javascript canvas Object
 }
 
 // HTML5 Canvas implementation of a DrawText
-func (s CanvasScreen) DrawText(text string, x, y int, color Color) {
+func (s *CanvasScreen) DrawText(text string, x, y int, color Color) {
 	ctx := s.Canvas.Call("getContext", "2d")
 
 	ctx.Set("fillStyle", fmt.Sprintf("rgb(%d, %d, %d)", color.R, color.G, color.B))
@@ -44,7 +44,7 @@ func (s CanvasScreen) DrawText(text string, x, y int, color Color) {
 }
 
 // HTML5 Canvas implementation of a DrawRect
-func (s CanvasScreen) DrawRect(x, y, w, h int, color Color) {
+func (s *CanvasScreen) DrawRect(x, y, w, h int, color Color) {
 	ctx := s.Canvas.Call("getContext", "2d")
 
 	ctx.Set("fillStyle", fmt.Sprintf("rgb(%d, %d, %d)", color.R, color.G, color.B))
@@ -52,11 +52,11 @@ func (s CanvasScreen) DrawRect(x, y, w, h int, color Color) {
 }
 
 // Canvas Width
-func (s CanvasScreen) Width() int {
+func (s *CanvasScreen) Width() int {
 	return s.Canvas.Get("width").Int()
 }
 
 // Canvas Height
-func (s CanvasScreen) Height() int {
+func (s *CanvasScreen) Height() int {
 	return s.Canvas.Get("height").Int()
 }

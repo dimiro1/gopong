@@ -5,8 +5,8 @@
 package main
 
 const (
-	KEY_UP   = 38
-	KEY_DOWN = 40
+	keyUp   = 38
+	keyDown = 40
 )
 
 // Keys help to know which keya are pressed
@@ -29,12 +29,12 @@ func (k *Keys) IsDown(key int) bool {
 	return exists && stat
 }
 
-// Attached to OnKeyDown event
+// OnKeyDown Attached to OnKeyDown event
 func (k *Keys) OnKeyDown(key int) {
 	k.Pressed[key] = true
 }
 
-// Attached to OnKeyUp event
+// OnKeyUp Attached to OnKeyUp event
 func (k *Keys) OnKeyUp(key int) {
 	k.Pressed[key] = false
 }
